@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <!--The title here can be overwritten by the other blueprints-->
+    <title>{% block title %}Home{% endblock %}</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+      <div class="container">
+        <a href="/" id="home" class="navbar-brand text-light">Home Security</a>
+
+        <button
+          class="navbar-toggler bg-dark"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <!--While a user is logged in show the following elements of the navbar-->
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a href="/learn-more" id="logout" class="nav-link text-light"
+                >Learn More</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="/control-panel"
+                id="control-panel"
+                class="nav-link text-light"
+                >Control-panel</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="/logout" id="logout" class="nav-link text-light"
+                >Log Out</a
+              >
+            </li>
+            <!--If a user is not logged in show the following elements of the navbar-->
+            {% else %}
+            <li class="nav-item">
+              <a href="/login" id="login" class="nav-link text-light">Log in</a>
+            </li>
+            <li class="nav-item">
+              <a href="/sign-up" id="sign-up" class="nav-link text-light"
+                >Sign up</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="/learn-more" id="logout" class="nav-link text-light"
+                >Learn More</a
+              >
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <br />
+    <br />
+    <!--retrieve the messages in auth.py, if the category of the message is error display a red alert
+    if the message is a success message display a green alert-->
+    <!--This is written in base.html so that flashing works on every page-->
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+    <div class="bg-dark">
+      {% block content %}<!--Here is where the main content from each
+    blueprint is displayed, if you refer to the other templates the extends base.html command
+    extends base.html from this point-->
+      {% endblock %}
+    </div>
+    <!--Footer displayed on each page-->
+    <section>
+      <footer class="p-5 bg-dark text-white text-center position-relative">
+        <div class="container">
+          <p class="lead">Copyright &copy; Security inc.</p>
+          <a href="#" class="position-absolute bottom-0 end-0 p-5">
+            <i class="bi bi-arrow-up-circle h1"> </i>
+          </a>
+        </div>
+      </footer>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

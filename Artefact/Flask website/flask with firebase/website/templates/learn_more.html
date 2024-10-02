@@ -1,0 +1,80 @@
+{% extends "base.html"%}
+<!-- Overwrites the title from base.html-->
+
+{% block title %}Our Story{% endblock %} {% block content %}
+
+<section
+  class="bg-dark text-light p-5 text-center text-sm-start p-lg-0 pt-lg-5"
+>
+  <div class="container">
+    <div class="d-sm-flex align-items-center justify-content-between">
+      <img
+        class="w-50 img-fluid d-none d-sm-block"
+        src="https://www.vivaciousmum.com/wp-content/uploads/2018/06/Home-Safety-Tips.jpg"
+      />
+      <div class="p-5">
+        <h1>
+          <span class="text-warning">What</span>
+          do we do?
+        </h1>
+        <p class="lead my-4">
+          At Home Security limited, we do our best to help our customers feel
+          safer. Our belief is that a safe and secure home, is a truly happy
+          home
+        </p>
+      </div>
+    </div>
+  </div>
+  <section id="learn" class="p-5 bg-dark text-light">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-md p-5">
+          <h2><span class="text-warning">How?</span></h2>
+          <p class="lead">
+            Our products are top of the line and have many features. Our cameras
+            use
+            <strong class="text-danger">face recognition</strong>, which can
+            recognise when anything resembling a face is shown to the camera. We
+            also have a built-in
+            <strong class="text-danger">face identification</strong> system
+            which allows users to add a database of images of people they know,
+            so that the camera will identify them. Through our website,
+            customers can, using their unique account, view data the camera
+            stores. For example, if your friend John was at the door at 12 o
+            clock today, that would be stored in the website, or if an unknown
+            person passed the camera at a different time, that would also be
+            stored.
+          </p>
+          <p></p>
+          <a href="/sign-up" class="btn btn-light mt-3">
+            <i class="bi bi-chevron-right"></i> Sign up today here!
+          </a>
+        </div>
+        <div class="col-md d-sm-block">
+          <img
+            src="https://www.researchgate.net/profile/Adrian-Bors/publication/233545388/figure/fig4/AS:670337972858889@1536832435447/Images-from-the-Yale-face-database-a-Original-data-set-b-Reconstructed-faces-from_Q320.jpg"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="text-center p-5">
+    <h1><span class="text-warning">Why</span> do we do this?</h1>
+    <img src="" alt="" />
+    <h4 class="lead">
+      We believe in today's world, it is important to have access to a home
+      security feed <strong class="text-danger">wherever</strong> you are.
+      Whether you are at work or somewhere else. Many companies provide
+      doorbells that do just this, however we decided to go a different route.
+      One issue we saw was that none of these devices provide access to any
+      data, or let you view your data through any web browser, rather than an
+      app.
+    </h4>
+  </section>
+</section>
+<section id="learn" class="p-5 bg-dark text-light">
+  <div class="container"></div>
+</section>
+{% endblock %}

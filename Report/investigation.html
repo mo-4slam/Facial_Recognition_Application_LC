@@ -1,0 +1,260 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="boot\css\bootstrap.min.css" />
+    <script type="text/javascript" src="boot\js\bootstrap.min.js"></script>
+    <title>Investigation</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light navbar-dark py-3 fixed-top">
+      <div class="container">
+        <a href="index.html" class="navbar-brand text-dark"
+          >LC STUDENT ASSIGNMENT 2022 REPORT
+        </a>
+
+        <button
+          class="navbar-toggler bg-dark"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="investigation.html" class="nav-link text-dark"
+                >Investigation and Plan</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="Design.html" class="nav-link text-dark">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="implementation.html" class="nav-link text-dark"
+                >Implementation and Testing</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="Evaluation.html" class="nav-link text-dark"
+                >Evaluation</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="references.html" class="nav-link text-dark"
+                >References</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1 class="text-dark text-center">Investigation and Plan</h1>
+    <section class="text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h2>Possible Responses</h2>
+            <ul>
+              <li>
+                <h4>Motion detection camera (rejected)</h4>
+                <ul>
+                  <li>
+                    User can view whenever motion is detected near their camera (access via login)
+                  </li>
+                  <li>
+                    This would respond to the security problem mentioned in the
+                    brief
+                  </li>
+                  <li>
+                    Rejected as I felt motion was not the most useful thing to
+                    be aware of as it could be triggered by many things
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h4>Plain security camera</h4>
+                <ul>
+                  
+                  <li>
+                    Plain embed into website of Live video feed directly from YouTube (access via login)
+                  </li>
+                  <li>
+                    Would meet security problem mentioned in the brief
+                  </li>
+                  <li>
+                    Originally rejected for seeming too simple however I was quite lucky to reject it as Youtube's streaming
+                    and embedding rules would have kept me from displaying my live feed on the site.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h4>
+                  Chosen Response - Face detection and recognition camera
+                  connected to a website
+                </h4>
+                <ul>
+                  <li>
+                    A front porch camera which can detect and identify faces it sees, and forward that data to a website. (access via login)
+                  </li>
+                  <li>
+                    Would respond to the security problem mentioned in the brief
+                  </li>
+                  <li>
+                    Could meet the requirements via a login system (data
+                    capture) to access a control panel (to monitor embedded
+                    system). This would be done using flask.
+                  </li>
+                </ul>
+                <li><h4>Social Implications and Possible Stakeholders</h4>
+                  <ul>
+                    <li>
+                      One social implication could be that the camera would record people without consent.
+                      A stakeholder would be parents wanting to monitor their home/children when not at home.
+                    </li>
+                  </ul>
+                </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h2>Research (Ring)</h2>
+            <p class="lead my-4">
+              One of the main existing solutions I conducted research on was
+              <a
+                href="https://www.businessinsider.com/how-does-ring-doorbell-work?r=US&IR=T#:~:text=The%20Ring%20doorbell%20works%20by,make%20your%20home%20more%20secure."
+                >Ring doorbells</a
+              >. Ring doorbells allow a user to see their live video feed wherever they are. This means it is
+              a standalone device and it can operate as part of a single system.
+              The Ring doorbell feed can be accessed via an app when a user logs
+              in. Through this research I decided I wanted to design a front
+              porch security camera.
+            </p>
+          </div>
+          <img
+            class="img-fluid w-50 d-none d-sm-block"
+            src="img/rvdgen2_vb.png.opdownload"
+            alt="Logo"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h2>Research (Google Nest)</h2>
+            <p class="lead my-4">
+              Another existing solution I did research on was the
+              <a
+                href="https://store.google.com/ie/category/connected_home?hl=en-GB"
+                >Google Nest</a
+              >
+              and its many variations. Upon further research into the Google
+              Nest I found that it had a built in face recognition function, but
+              not a face identification function. This inspired me to include face identification.
+            </p>
+          </div>
+          <img class="p-5 w-50" src="img/l_10182401_006.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h2>Flask</h2>
+            <p class="lead my-4">
+              Like Ring, I needed to have a login system to access the
+              feed, so I looked into various methods to do so. The most suitable
+              method I found was using Flask, a micro-web framework written in
+              python. I learnt a lot about flask through
+              <a href="https://www.youtube.com/watch?v=dam0GPOAvVI&t=3286s"
+                >this</a
+              >
+              Youtube tutorial by Tech with Tim. Through Flask I could create a
+              database of Users to login and I could also retrieve data entered
+              in forms within the website, which would then meet the
+              requirements for the website. While conducting more research into
+              flask, I found I could use flask to include python functions
+              within a HTML file. I could also
+              place if statements within my HTML file, so that certain pages
+              will not show up unless a user is logged in.
+            </p>
+          </div>
+          <img
+            class="p-5 w-50"
+            src="img/flask-logo-png-transparent.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <section class="text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h2>Bootstrap</h2>
+            <p class="lead my-4">
+              In the brief one of the requirements for the website is a clean,
+              crisp and consistent visual style. Using the CSS
+              framework Bootstrap would have be perfect. I watched
+              several
+              <a href="https://www.youtube.com/watch?v=gqOEoUR5RHg"
+                >tutorials</a
+              >
+              about bootstrap and learned that keeping a consistent design using
+              bootstrap was very easy. To meet another requirement, I needed the
+              website to be responsive so that it would be easily accessible to
+              people no matter what device/browser they are using.(inclusive to all users) To my
+              delight, this was even easier to do using Bootstrap. Bootstrap has
+              built in functionality for making certain features responsive.
+              Including sm before a certain style in the class tag will cause
+              that style to only happen on small screens. For example if I
+              wanted to center certain text but only on small screens, I could
+              use sm-text-center.
+            </p>
+          </div>
+          <img class="p-5" src="img/Bootstrap_logo.svg.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!---->
+    <section class="text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h2>OpenCV</h2>
+            <p class="lead my-4">
+              OpenCV is an open source computer vision and machine learning
+              software library. OpenCV has thousands of algorithms used for
+              machine learning to detect and recognise faces, or identify
+              objects, or even classify human actions. I chose to use OpenCV to
+              create my face recognition and identification program as it had
+              useful built-in functions to help me and I could easily train my
+              algorithm using my own data.
+            </p>
+          </div>
+          <img class="p-5 w-25" src="img/OpenCV_logo_black_.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <footer class="bg-dark text-center text-light">
+      <div class="text-center p-3">© Exam number: 105773</div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="boot\css\bootstrap.min.css" />
+    <script type="text/javascript" src="boot\js\bootstrap.min.js"></script>
+    <title>Design</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light navbar-dark py-3 fixed-top">
+      <div class="container">
+        <a href="index.html" class="navbar-brand text-dark"
+          >LC STUDENT ASSIGNMENT 2022 REPORT
+        </a>
+
+        <button
+          class="navbar-toggler bg-dark"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="investigation.html" class="nav-link text-dark"
+                >Investigation and Plan</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="Design.html" class="nav-link text-dark">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="implementation.html" class="nav-link text-dark"
+                >Implementation and Testing</a
+              >
+            </li>
+            <li class="nav-item">
+                <a href="Evaluation.html" class="nav-link text-dark"
+                  >Evaluation</a
+                >
+              </li>
+            <li class="nav-item">
+              <a href="references.html" class="nav-link text-dark">References</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1 class="text-dark text-center">
+      Design Page
+      <p class="lead p-5">
+        The artefact will be catered towards the requirements in the brief in
+        several ways
+      </p>
+    </h1>
+
+    <section class="text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>How will the website meet the brief</h1>
+            <h3>Requirements to be met:</h3>
+            <ul>
+              <li>1 or more data capture forms</li>
+              <li>Implement validation checks</li>
+              <li>Accessibility</li>
+              <li>GDPR and acceptable use
+                <ul>
+                  <li>Designed to comply with GDPR, user passwords are hashed and there is nothing within my artefact 
+                    which will identify me, the windows account I used was not on my own name and the github repo I used for some images was connected with
+                    a throwaway account.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h5>1 or more data capture forms:</h5>
+            <p class="lead my-4">
+                The website will contain 3 data capture forms, 1 newsletter, 1 login
+                page and 1 sign up page. All of their data will be captured via Flask.
+                The site will programmed so that anytime a POST request is made
+                any data sent in that request is retrieved.
+              </p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+      <section class="text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5">
+        <div class="container">
+          <div class="d-sm-flex align-items-center justify-content-between">
+            <div>
+              <h5>Implement validation checks:</h5>
+              <p class="lead my-4">
+                  I plan to use python functions to implement validation checks. This should be easy as flask will allow me 
+                  to use python with my website quite easily. I can implement the checks in the same area where the data is retrieved.
+                  For example if a certain value needs to be greater than 5 characters I can create an if statement to validate it.
+                  If all a user's info is valid I can use flask to render the template the user is requesting or I can use the 'login_user()' flask command.
+                  Bootstrap will also allow me to implement validation checks by adding a 'type' to certain inputs, if the type is set to email bootstrap will automatically notify the user that '@' is required for the email field.
+                </p>
+              </p>
+            </div>
+            <img
+              class="img-fluid p-5 w-50 d-none d-sm-block"
+              src="img/validation signup.png"
+              alt="Logo"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5">
+          <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between">
+              <div>
+                <h5></h5>
+                <p class="lead my-4">
+                  <figure>
+                      <img src="img/newsletter validation.png" height="200" width="600">
+                      <figcaption class="text-center">Validation</figcaption>
+                  </figure>
+                  </p>
+                </p>
+              </div>
+              <figure>
+                  <img src="img/login validation.png" height="300" width="500">
+                  <figcaption class="text-center">Login page</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+      <section class="text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5">
+        <div class="container">
+          <div class="d-sm-flex align-items-center justify-content-between">
+            <div>
+              <h5>Accessibility:</h5>
+              <p class="lead my-4">
+                  Throughout the site I plan to use bootstrap functions that make the website responsive 
+                  to all different screen sizes, so no matter what platform/browser a user is on the 
+                  website will still be functional. In this image we see an example of a navbar that only expands 
+                  out when viewed on a larger screen, otherwise it is contracted inside of a navbar toggler.
+                  It is also possible in bootstrap to make certain images dissapear if the webpage is viewed
+                  on a smaller screen. This is done using (d-sm-block)
+
+                </p>
+              </p>
+            </div>
+            <img
+              class="img-fluid p-5 w-50 d-none d-sm-block"
+              src="img/Screenshot 2022-03-22 013115.png"
+              alt="Logo"
+            />
+          </div>
+        </div>
+      </section>
+    <section class="text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>
+                How the embedded system met the brief:
+            </h1>
+            <h4>
+                Requirements to be met:
+            </h4>
+            <ul>
+                <li>Must be a standalone device (remote operation is not needed)</li>
+                <li>Operates with little to no manual intervention</li>
+                <li>Can be monitored on the website in some way</li>
+            </ul>
+            <h1>System architecture (face recognition and identification)</h1>
+            <p class="lead my-4">
+              The flowchart on the right describe the system architecture of the
+              face recognition and identification process. Once the code is run,
+              the process will continously loop (therefore is is fully
+              automated as per the brief) until the user manually interrupts it by pressing the
+              'q' key. While the code is running, the laptop displays a colour
+              version of the camera feed, and converts a seperate frame into
+              grayscale, as opencv's cascade recognizers and face identification
+              functions require the image to be in grayscale. Using the
+              frontal_face cascade, the program checks if it is able to identify
+              a frontal face anywhere in the frame, and if it can it will
+              generate the co-ordinates of that face, and display them on the
+              colour frame which was initialized in the beginning. The program
+              will then further attempt to identify a face in the frame, by
+              comparing it to the images provided by the user in "User data", it
+              can then retrieve the name of that face and also display that on
+              the colour frame. This means the embedded system will be a standalone 
+              system and will require no manual intervention once it is running.
+            </p>
+          </div>
+          <img
+            class=" p-5 img-fluid w-50 d-none d-sm-block"
+            src="img/Flowchart.drawio.png"
+            alt="Logo"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>Data flow</h1>
+            <p class="lead my-4">
+             As seen in the data flow diagram on the right, when face recognition and identification occurs the data developed is sent and stored in firebase. This way the embedded system can be monitored from the website as the brief says.
+            </p>
+          </div>
+          <img class="img-fluid w-50 d-none d-sm-block" src="img/Dataflow.png" alt="Logo" />
+        </div>
+      </div>
+    </section>
+    <footer class="bg-dark text-center text-light">
+        <div class="text-center p-3">© Exam number: 105773</div>
+      </footer>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+{% extends "base.html"%}
+<!-- Overwrites the title from base.html-->
+
+{% block title %}Sign up{% endblock %} {% block content %}
+<section class="p-5">
+  <section class="vh-100 bg-image">
+    <div class="mask d-flex align-items-center h-100">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px">
+              <div class="card-body p-5">
+                <h2 class="text-uppercase text-center mb-5">
+                  Create an account
+                </h2>
+
+                <form method="post" autocomplete="off">
+                  <div class="form-outline mb-4">
+                    <input
+                      type="text"
+                      id="name"
+                      class="form-control form-control-lg"
+                      name="name"
+                      placeholder="Enter name"
+                    />
+                    <label class="form-label" for="Name input">Your Name</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Enter your email address"
+                      class="form-control form-control-lg"
+                    />
+                    <label class="form-label" for="Email input"
+                      >Your Email</label
+                    >
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input
+                      type="password"
+                      id="password1"
+                      name="password1"
+                      placeholder="Enter your password"
+                      class="form-control form-control-lg"
+                    />
+                    <label class="form-label" for="Password input"
+                      >Password</label
+                    >
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input
+                      type="password"
+                      id="password2"
+                      name="password2"
+                      placeholder="Re-enter your password"
+                      class="form-control form-control-lg"
+                    />
+                    <label class="form-label" for="Password2"
+                      >Repeat your password</label
+                    >
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <label for="start">Date of birth (Must be over 18):</label>
+
+                    <input
+                      type="date"
+                      id="date"
+                      name="trip-start"
+                      value="2022-03-21"
+                      min="0000-01-01"
+                      max="2004-03-21"
+                    />
+                  </div>
+
+                  <div class="form-check d-flex justify-content-center mb-5">
+                    <input
+                      class="form-check-input me-2"
+                      type="checkbox"
+                      value=""
+                      id="agree"
+                      name="agree"
+                    />
+                    <label class="form-check-label" for="form2Example3g">
+                      I agree all statements in
+                      <a href="#!" class="text-body"><u>Terms of service</u></a>
+                    </label>
+                  </div>
+
+                  <div class="d-flex justify-content-center">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-block btn-lg text-body"
+                    >
+                      Register
+                    </button>
+                  </div>
+
+                  <p class="text-center text-muted mt-5 mb-0">
+                    Already have an account?
+                    <a href="/login" class="fw-bold text-body"
+                      ><u>Login here</u></a
+                    >
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends "base.html"%} 
+<!-- Overwrites the title from base.html-->
+
+{% block title %}Home{% endblock %} {% block content %}
+<!--Showcase-->
+
+<section
+  class="bg-dark text-light p-5 text-center text-sm-start p-lg-0 pt-lg-5"
+>
+  <div class="container">
+    <div class="d-sm-flex align-items-center justify-content-between">
+      <div>
+        <h1>
+          <span class="text-warning">YOUR</span> home security is
+          <span class="text-warning">YOUR</span> business
+        </h1>
+        <p class="lead my-4">
+          We strive to provide our customers with top level security, while also
+          allowing them full control.
+        </p>
+        <form method="get" action="/control-panel">
+          <button class="btn btn-info btn-large" type="submit">
+            Access Your Device
+          </button>
+        </form>
+      </div>
+      <img
+        class="img-fluid w-50 d-none d-sm-block"
+        src="https://github.com/ballisticfpz/IMAGES-FOR-LC2022/blob/main/securitylogocorrected.png?raw=true"
+        alt="Logo"
+      />
+    </div>
+  </div>
+</section>
+<section class="bg-primary text-light p-5">
+  <div class="container">
+    <div class="d-md-flex justify-content-between align-items-center">
+      <h3 class="mb-3 mb-md-0">Sign Up For Our Newsletter</h3>
+
+      <form method="post" autocomplete="off" class="input-group news-input">
+        <input
+          type="email"
+          id="newsletteremail"
+          name="newsletteremail"
+          placeholder="Enter your address"
+          class="form-control form-control-lg"
+        />
+        <button class="btn btn-dark btn-block btn-lg text-light" type="submit">
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="learn" class="p-5 bg-dark text-light">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md p-5">
+        <h2>Our <span class="text-primary">Mission</span></h2>
+        <p class="lead">
+          Our Mission is to provide our customers with a security artillery that
+          helps them feel safe. We believe a good home is a safe home, and we
+          complete our mission using:
+        </p>
+        <p></p>
+        <ul>
+          <li>High quality face recognition cameras</li>
+          <li>In-built customisable indentification system</li>
+          <li>Accessible website for our customers</li>
+          <li>Easy and simple monitoring of the camera, through our website</li>
+        </ul>
+        <a href="/learn-more" class="btn btn-light mt-3">
+          <i class="bi bi-chevron-right"></i> Read More
+        </a>
+      </div>
+      <div class="col-md">
+        <img
+          src="https://i0.wp.com/tek2day.com/wp-content/uploads/2019/01/Smart-Home.gif?fit=600%2C479&ssl=1"
+          class="img-fluid"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</section>
+<section id="learn" class="p-5 bg-dark">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md">
+        <img src="https://assets.hongkiat.com/uploads/logo-parodies/amazoncom_moneyzgonecom.jpg?newedit" class="img-fluid" alt="" />
+      </div>
+      <div class="col-md p-5 text-light">
+        <h2>Visit our site on <strong class="text-danger">Moneyzgone.com</strong></h2>
+        <p class="lead">
+          Upon release all our products are released instantenously and exclusively on moneyzgone.com
+        </p>
+        <p>
+          Visit now for a free discount on <span class="text-warning">Door Camera</span> using promo code: [HOMESECURITYLIMITED]
+        </p>
+        <a href="#" class="btn btn-light mt-3">
+          <i class="bi bi-chevron-right"></i> Save now!
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+  {% endblock %}
+</section>

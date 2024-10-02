@@ -1,0 +1,230 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="boot\css\bootstrap.min.css" />
+    <script type="text/javascript" src="boot\js\bootstrap.min.js"></script>
+    <title>Implementation and Testing</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light navbar-dark py-3 fixed-top">
+        <div class="container">
+          <a href="index.html" class="navbar-brand text-dark"
+            >LC STUDENT ASSIGNMENT 2022 REPORT
+          </a>
+  
+          <button
+            class="navbar-toggler bg-dark"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="investigation.html" class="nav-link text-dark"
+                  >Investigation and Plan</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="Design.html" class="nav-link text-dark">Design</a>
+              </li>
+              <li class="nav-item">
+                <a href="implementation.html" class="nav-link text-dark"
+                  >Implementation and Testing</a
+                >
+              </li>
+              <li class="nav-item">
+                  <a href="Evaluation.html" class="nav-link text-dark"
+                    >Evaluation</a
+                  >
+                </li>
+              <li class="nav-item">
+                <a href="references.html" class="nav-link text-dark">References</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <br />
+    <br />
+    <br />
+    <br />
+  
+</video>
+<h1 class="text-dark text-center">Timeline <h2 class="text-center">(Red boxes represent requirements)</h2></h1>
+    <section class="text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <p class="lead my-4">
+              <ul>
+                <li> 
+                  20/12/21 Functioning face recognition program created.
+                </li>
+                <li>
+                  20/01/22 Functioning face recognition and identification program created.
+                </li>
+                <li>
+                  24/02/22 Flask Web app is created and functioning correctly.
+                </li>
+                <li>
+                  25/02/22 When I tried to implement firebase to send my face recognition data to my website
+                  I ran into issues as the python version used for opencv and firebase conflicted.
+                </li>
+                <li>
+                  8/03/22 Doomsday
+                </li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text-center">
+    <img
+            class=""
+            src="img/timeline.png"
+            alt="Logo"
+          />
+    </section>
+    <br>
+    <h1 class="text-dark text-center">Implementation and Testing</h1>
+    <h3 class="text-dark text-center">(Note commenting in images of code)</h3>
+
+    <section class="text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <p class="lead my-4">
+              My method of choice for development was the waterfall method, it
+              is a simple yet effective method which also matches what we have
+              been asked to do for the assignment. This is because a waterfall
+              method requires solid requirements that will remain unchanged,
+              similar to the brief of the project.
+            </p>
+          </div>
+          <img
+            class="img-fluid w-50 d-none d-sm-block"
+            src="img/waterfall-method-process.png"
+            alt="Logo"
+          />
+        </div>
+      </div>
+    </section>
+  
+    <section class="text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5">
+        <div class="container">
+          <div class="d-sm-flex align-items-center justify-content-between">
+            <div>
+              <h2 class="text-dark text-center">Design</h2>
+              <p class="lead my-4">
+                The final idea I developed to meet the requirements after my research was a <strong>front porch camera</strong>, with built in face recognition and identification, which would post its most recent data to the website's control panel, which may be accessed using a login.
+                It would operate in an infinite loop so no manual intervention would be required. I also decided I would be using flask to run the website and have a functioning login/signup to access the coontrol panel, and also to be able to use python scripts along with my website.
+                I finally decided that I would also use a mix of firebase to send my face recognition data to my website
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <h2 class="text-dark text-center">Implementation</h2>
+      <section class="text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5">
+        <div class="container">
+          <div class="d-sm-flex align-items-center justify-content-between">
+            <div>
+                <h5>Face recognition and identification program: <p class=" text-warning">open "Artefact/COMP SCI/Face recognition-identification code" folder to view referenced files here</p></h5>
+              <p class="lead my-4">
+                I created my face recognition and identification program using opencv.
+                The first thing I decided to do was set up a simple program to only recognise a face when it sees one, so using opencv
+                I could open the webcam of my device and anytime anything resembling a face was displayed that would be recognised. 
+                First, I wrote my code so that anytime it is run it will display the color version of the frame constantly, as the recognizing 
+                and identifying needed to be done on a grayscale frame, the grayscale frame was made but not displayed to the user.
+<br><image src="img/display colour frame.png"></image> <image src ="img/graycale.png"></image>
+<br>
+On this grayscale frame using the cascade classifiers we find a face and define a (x, y, w, h) for its position. We can then, using cv2.rectangle, draw a rectangle, based on those coordinates, onto our live colour feed. <br> <image src="img/x,y,w,h.png"></image> <image src="img/drawrectangle.png"></image> <br> 
+Now that I had this complete and my code could recognise a face I had to make my code identify certain faces. I created a new file (faces-train.py) in which I would train an Recognizer. This Recognizer would be used in my main file to identify faces. I collected several images of Muhammad Ali, Imran Khan and Xi Jinping. Then in my trainer file I (imported os) found the directory for these images and saved their path. Using os.walk I iterated through the images and took any jpg or png images and created an associated label for each folder/person(replacing any spaces in the names with a dash to prevent any issues). <br> <image src="img/cratlabel.png"></image> <br>  I also converted the images to grayscale and resized them using PIL (pillow, Python Image library). Once I did this I was able to create a numpy array for each image. Then, using the haar cascade used earlier, I found a region of interest of the numpy arrays which were created, and appended them to a list. I also appended the label ids to a separate list so that I could add them to my Recognizer along with the regions of interest.
+
+
+            </p>
+            <p class="lead my-4">
+              Now that I had an recognizer created to identify faces, I had to implement it in my main file. I loaded in the labels from labels.pickle and using
+               opencv read the recognizer file. The recognizer algorithm I used to complement my recpognizer was the LBPH recognizer (Local Binary Pattern Histogram). 
+               Using recognizer.predict I created an if statement where if the roi_gray (same one created in the first code) compared to the arrays in my recognizer fell between a confidence level of 0 to 50 
+               (0 being most accurate) to print the id of the match, and the label associated with that id, and to also create a variable that stored the label (name is equal to the label of that specific id).
+               <br><img src="img/confidence 1.png"> <img src="img/confidence 2.png"> <img src="img/confidence 3.png"> 
+               <br>Then, I created a dictionary called data (higher level data structures) which I would upload to firebase. To do this I had to connect my firebase database to my face recognition program.<br>
+               <image src="img/firebase upload 1.png"></image> <image src="img/firebase upload 2.png"></image>
+
+            </p>
+            <h5>Website: <p class="text-warning">Open "Artefact/Flask website" folder to view referenced files here</p> </h5>
+
+            <p class="lead my-4">
+                I created my website using flask. First I setup the web app by creating the basic file structure of a flask web app.<br> <img src="img/file structure flask.png"><br> After I had done this I setup my webapp to run when the main.py file was run. (Image to the right is the function called) <br><image src="img/mainpy.png"> <img src="img/creatfunction.png">
+                  <br>I then setup the views I needed in views.py and auth.py. Each view is dedicated to a certain page, and renders the template (html document) of that page.<br><img src="img/homeview.png">
+                  <br>I setup my base template (base.html) and then created the "child" templates (4+ pages) which will use the base.html as their base. <img src="img/templates.png">.
+                  <br>At the top of each html document I added the following code, now, if these templates were rendered they would render in the chosen elements from the base.html file (navbar, footer etc.) and and then load in their unique features.<img src="img/exteneds.png">
+                  <br>Once I had designed each of the webpages and connected them I had to create a functioning login/signup. To do this I had to initialize a database to store Users.<br><img src="img/createdatabase.png">
+                  <br>I then added code to my signup and login python functions so that (when a post request is made with fully valid information, view validation in Design page) to either create a new account and send that to the database (db.commit) or login the user (1 or more data capture form). I also created
+                  a newsletter input box that would take a post request containing an email and print it to the shell.<br>
+                  <figure><img src="img/newsletter.png"><figcaption >Newsletter</figcaption></figure>
+                  <br><br><figure><img src="img/signupworking.png"><figcaption>If the signup is valid (NOTE: DB.COMMIT ADDS USER TO DATABSE OF USERS (DATA COLLECTION REQUIREMENT)</figcaption></figure> <br><br> <figure><figcaption>If Login details are valid</figcaption><img src="img/loginworking.png"> </figure>
+                  <br>I also, to meet the higher level data structure mentioned in the marking scheme, decided to retrieve all inputted data into any forms and print them to the shell using an immutable dictionary.<br>
+                  <img src="img\Screenshot 2022-03-22 033657.png">
+
+
+            </p>
+            </div>
+                
+          </div>
+        </div>
+        
+      </section>
+      <section class="text-dark p-5 text-center text-sm-start p-lg-0 pt-lg-5">
+        <div class="container">
+          <div class="d-sm-flex align-items-center justify-content-between">
+            <div>
+                <h5>Testing: </h5>
+              <p class="lead my-4">
+                I chose to use functional testing as it validates the system against the functional requirements/specifications. 
+                This method worked well with both my face recognition and with the data I was sending/receiving. In relation to the data,
+                testing had little impact on the development as I often had to implement fast fixes, which were usually spelling mistakes 
+                in variables or incorrect formatting. However with my face recognition program, testing was extremely important. I had to
+                continously test my program to make sure it never gave false positives, that was my main requirement. Sometimes the program would
+                recognise me as muhammad ali, or mistake Xi jinping for someone else. After vigorous testing and changing the confidence levels 
+                I used in my program I managed to solve this issue with not a lot of time lost.
+                <figure><img src="img/confidence level.png"> <figcaption>Final chosen confidence was 1 to 50</figcaption></figure>
+                </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1 class="text-center">Some extras</h1>
+        <p class="lead my-4 text-center">
+          I used functions in my face recognition file for the live feed so that I could change the resolution easily
+        </p>
+        <div class="container text-center"><img src="img/functions face rec.png" alt=""></div>
+        <p class="lead my-4 text-center">
+          To avoid duplication I made face_cascade = (this opencv function) so I didnt have to type it out over and over again (minimal duplication of code)
+        </p>
+        <div class="container text-center"><img src="img/facecascadeduplication.png" alt=""></div>
+        <p class="lead my-4 text-center">
+          To take a modular approach I used bootstrap when coding the website, this framework allowed me to use take components from an online css file, which reduced the bulk of my file.
+          As I used flask, I only had to link the css file in th base file since the other files would continue off this base file, and automatically import bootstrap too.
+        </p>
+        <div class="container text-center"><img src="img/bootcss.png" alt=""></div>
+        
+        <h1 class="text-center">Video</h1>
+        <div class="container text-center">
+          <video class =""controls width ="750"src="LC 2022 SA VIDEO EXAM NUMBER 105773.mov"></video>
+        </div>
+      </section>
+      <footer class="bg-dark text-center text-light">
+        <div class="text-center p-3">© Exam number: 105773</div>
+      </footer>
+  </body>
+</html>

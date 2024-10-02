@@ -1,0 +1,24 @@
+{% extends "base.html"%}
+<!-- Overwrites the title from base.html-->
+{% block title %}Control Panel{% endblock %} {% block content %}
+<section class="bg-dark">
+  <h1 class="text-center text-light">Welcome {{ user }}</h1>
+  <br />
+  <br />
+  <div class="container text-center">
+    <h1 class="text-light">Last Identified Person: {{ somedata }}</h1>
+  </div>
+</section>
+<br /><br />
+<div class="container text-center">
+  <iframe
+    width="748"
+    height="421"
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>
+{% endblock %}
